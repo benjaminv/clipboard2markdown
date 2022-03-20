@@ -311,6 +311,7 @@ module.exports = [
       return node.nodeName === 'PRE' &&
       node.firstChild &&
       node.firstChild.nodeName === 'CODE'
+      // This will not work
     },
     replacement: function (content, node) {
       return '\n\n```\n' + node.firstChild.textContent + '\n```\n\n'
